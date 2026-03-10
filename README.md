@@ -50,6 +50,8 @@ Cloud Database – Stores patient health data and medical records
 Health Monitoring Tool Using Smartwatch Data
 
 The Evolving Role of Smart Watches in Health Tracking
+
+
 Project Resources
  GitHub Repository
 https://github.com/VarshaDevi21/LifeXcelerate/tree/main
