@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Patient Details</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body{
+font-family: Arial;
+background:#f5f5f5;
+margin:40px;
+}
+
+h1{
+text-align:center;
+color:red;
+}
+
+.container{
+width:800px;
+margin:auto;
+background:white;
+padding:20px;
+box-shadow:0px 0px 10px gray;
+}
+
+img{
+width:150px;
+height:150px;
+}
+
+.abnormal{
+color:red;
+font-size:40px;
+font-weight:bold;
+}
+
+.section{
+margin-top:20px;
+}
+
+button{
+padding:8px 15px;
+margin:5px;
+font-size:15px;
+cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Patient Details</h1>
+
+<div class="container">
+
+<img src="./patient.jpeg">
+
+<p><b>Name:</b> Ravi Kumar</p>
+<p><b>Age:</b> 45</p>
+<p><b>Blood Group:</b> O+</p>
+<p><b>Weight:</b> 70 kg</p>
+<p><b>Height:</b> 170 cm</p>
+
+<div class="section">
+<h2>Health Data</h2>
+
+<p><b>Heart Rate:</b> 120 bpm</p>
+<p><b>Blood Pressure:</b> 160 / 100 mmHg</p>
+
+<div class="abnormal">ABNORMAL</div>
+
+<p><b>Heart Rate:</b> 128 bpm</p>
+<p><b>Blood Pressure:</b> 145 / 85 mmHg</p>
+
+</div>
+
+
+<div class="section">
+
+<h2>Health Graph Record</h2>
+
+<button onclick="showDay()">One Day</button>
+<button onclick="showWeek()">One Week</button>
+<button onclick="showMonth()">One Month</button>
+
+<canvas id="healthChart"></canvas>
+
+</div>
+
+
+<div class="section">
+
+<h2>Patient History</h2>
+
+<p>• 2022 – Heart surgery</p>
+<p>• 2023 – Diabetes treatment</p>
+<p>• Regular blood pressure medication</p>
+
+</div>
+
+<div class="section">
+
+<h2>Health Reports</h2>
+
+<p>ECG Report : Normal</p>
+<p>Blood Test : Slight Cholesterol</p>
+<p>Scan Report : Mild artery blockage</p>
+
+</div>
+
+</div>
+
+
+<script>
+
+var ctx=document.getElementById("healthChart").getContext("2d");
+
+var chart=new Chart(ctx,{
+type:'line',
+data:{
+labels:["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+datasets:[
+{
+label:"Heart Rate",
+data:[110,115,120,118,122,119,121],
+borderColor:"red",
+fill:false
+},
+{
+label:"Blood Pressure",
+data:[150,155,160,158,162,159,161],
+borderColor:"blue",
+fill:false
+}
+]
+}
+});
+
+function showDay(){
+
+chart.data.labels=["Morning","Noon","Evening","Night"];
+
+chart.data.datasets[0].data=[110,120,118,122];
+chart.data.datasets[1].data=[150,160,158,162];
+
+chart.update();
+}
+
+function showWeek(){
+
+chart.data.labels=["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+
+chart.data.datasets[0].data=[110,115,120,118,122,119,121];
+chart.data.datasets[1].data=[150,155,160,158,162,159,161];
+
+chart.update();
+}
+
+function showMonth(){
+
+chart.data.labels=["Week1","Week2","Week3","Week4"];
+
+chart.data.datasets[0].data=[115,120,118,122];
+chart.data.datasets[1].data=[155,160,158,162];
+
+chart.update();
+}
+
+</script>
+
+</body>
+</html>

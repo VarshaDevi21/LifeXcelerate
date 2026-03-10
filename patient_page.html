@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Patient Details</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f7f7f7;
+padding:20px;
+}
+
+/* Patient Top Section */
+
+.top{
+display:flex;
+align-items:center;
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0px 0px 10px gray;
+}
+
+/* Patient Photo */
+
+.patient-photo{
+width:120px;
+height:120px;
+border-radius:50%;
+object-fit:cover;
+margin-right:20px;
+}
+
+/* Table */
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:30px;
+background:white;
+}
+
+table,th,td{
+border:1px solid #ccc;
+}
+
+th{
+background:#1976d2;
+color:white;
+}
+
+th,td{
+padding:10px;
+text-align:center;
+}
+
+/* Button */
+
+button{
+margin-top:30px;
+padding:12px 25px;
+font-size:16px;
+background:green;
+color:white;
+border:none;
+cursor:pointer;
+border-radius:5px;
+}
+
+button:hover{
+background:#0a8a0a;
+}
+
+/* Message */
+
+#msg{
+font-size:22px;
+color:green;
+margin-top:20px;
+font-weight:bold;
+}
+
+</style>
+
+<script>
+
+function reached(){
+
+document.getElementById("msg").innerHTML =
+"🚑 Patient Successfully Reached Hospital. Thank You For Your Service!";
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Patient Emergency Details</h2>
+
+<div class="top">
+
+<!-- Patient Photo -->
+
+<img class="patient-photo" src="./patient.jpeg">
+
+<div>
+
+<p><b>Name :</b> Ravi Kumar</p>
+<p><b>Age :</b> 45</p>
+<p><b>Blood Group :</b> O+</p>
+<p><b>Patient ID :</b> 5525</p>
+<p><b>Height :</b> 170 cm</p>
+<p><b>Weight :</b> 70 kg</p>
+</div>
+
+</div>
+
+<h3>Emergency Medication By Response Team</h3>
+
+<table>
+
+<tr>
+<th>Order</th>
+<th>Medication</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Oxygen Support</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>CPR Check</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Blood Pressure Check</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>IV Injection</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>ECG Monitor</td>
+</tr>
+
+</table>
+
+<button onclick="reached()">Reached Hospital</button>
+
+<p id="msg"></p>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ambulance Attender</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#f2f2f2;
+text-align:center;
+margin-top:80px;
+}
+
+.attender img{
+width:120px;
+height:120px;
+border-radius:50%;
+}
+
+input{
+padding:10px;
+font-size:18px;
+width:150px;
+text-align:center;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+background:red;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+</style>
+
+<script>
+
+function checkOTP(){
+
+var otp=document.getElementById("otp").value;
+
+if(otp=="2310")
+{
+window.location="patient_page.html";
+}
+
+else
+{
+alert("Wrong OTP");
+}
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h2>Ambulance Attender Login</h2>
+
+<div class="attender">
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFw1Iv5ZVg1iTIOGRGcnaerjYrr3RkIQXhxQ&s">
+
+<h3>Name : Varsha Devi</h3>
+<p>ID : AMB102</p>
+<p>Contact : 9876543210</p>
+
+<br>
+
+<h3>Enter OTP</h3>
+
+<input type="text" id="otp" placeholder="Enter OTP">
+
+<br><br>
+
+<button onclick="checkOTP()">Submit</button>
+
+</div>
+
+</body>
+</html>
