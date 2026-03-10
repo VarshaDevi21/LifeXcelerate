@@ -1,48 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hospital</title>
+<title>Hospital Ambulance Service</title>
 
 <style>
+
 body{
-font-family: Arial;
-text-align:center;
-margin-top:120px;
-background:#f2f2f2;
+font-family: Arial, sans-serif;
+margin:0;
+background:#eaf6ff;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
 }
 
-h1{
-font-size:55px;
-color:red;
+.container{
+background:white;
+padding:40px;
+width:350px;
+border-radius:10px;
+box-shadow:0px 5px 15px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+.header{
+background:#2a7de1;
+color:white;
+padding:15px;
+font-size:22px;
+border-radius:8px 8px 0 0;
+margin:-40px -40px 20px -40px;
+}
+
+.icon{
+font-size:45px;
+margin-bottom:10px;
 }
 
 input{
+width:90%;
 padding:12px;
-font-size:18px;
-width:200px;
+margin-top:10px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:16px;
 }
 
 button{
+margin-top:20px;
 padding:12px 25px;
-font-size:18px;
-background:green;
+background:#2a7de1;
 color:white;
 border:none;
+border-radius:6px;
+font-size:16px;
 cursor:pointer;
-margin-top:10px;
 }
+
+button:hover{
+background:#1d5fb8;
+}
+
+.footer{
+margin-top:15px;
+font-size:13px;
+color:gray;
+}
+
 </style>
 
 <script>
-function checkID(){
-var pid=document.getElementById("pid").value;
+function checkOTP(){
 
-if(pid=="5525"){
+var otp=document.getElementById("otp").value;
+
+if(otp=="2310"){
 window.location="patient.html";
 }
 else{
-alert("Invalid Patient ID");
+alert("Wrong OTP");
 }
+
 }
 </script>
 
@@ -50,15 +89,28 @@ alert("Invalid Patient ID");
 
 <body>
 
-<h1>Apollo Hospital</h1>
+<div class="container">
 
-<h2>Enter Patient ID</h2>
+<div class="header">🏥 Smart Ambulance System</div>
 
-<input type="text" id="pid" placeholder="Enter PID">
+<div class="icon">🚑</div>
 
-<br><br>
+<h3>Patient Verification</h3>
 
-<button onclick="checkID()">View Details</button>
+<p>Enter the OTP sent to your mobile</p>
+
+<input type="text" id="otp" placeholder="Enter OTP">
+
+<br>
+
+<button onclick="checkOTP()">Verify OTP</button>
+
+<div class="footer">
+Doctor • Patient • Emergency Service
+</div>
+
+</div>
 
 </body>
+
 </html>
