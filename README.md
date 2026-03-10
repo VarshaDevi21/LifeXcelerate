@@ -1,10 +1,12 @@
 LifeXcelerate – Smart IoT Healthcare Emergency System
+
 Overview
 LifeXcelerate is an IoT‑based healthcare monitoring system designed to provide real‑time health tracking and rapid emergency response. The system continuously monitors vital parameters such as heart rate and blood oxygen levels (SpO₂) and automatically sends alerts to caregivers and emergency teams when abnormal conditions are detected.
 
 The goal of LifeXcelerate is to improve patient safety, reduce emergency response time, and support faster medical decision‑making through smart health monitoring and connected healthcare services.
 
 Key Features
+
 Real‑Time Health Monitoring – Tracks vital signs using wearable sensors.
 
 Automated Emergency Alerts – Sends instant notifications when abnormal readings occur.
@@ -16,6 +18,7 @@ Centralized Patient Database – Allows hospitals to access patient medical reco
 IoT‑Based System – Uses connected devices to enable continuous monitoring.
 
 System Architecture
+
 The LifeXcelerate system consists of four main layers:
 
 IoT Health Monitoring Layer
@@ -35,6 +38,7 @@ Hospital Integration Layer
 Hospitals access patient records and medical information through the platform.
 
 Technologies Used
+
 ESP32 Microcontroller – Sensor data processing and communication
 
 IoT Health Sensors – Heart rate and SpO₂ monitoring
